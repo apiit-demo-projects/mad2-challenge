@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge/product_screen.dart';
 import 'package:flutter_challenge/profile_screen.dart';
 
 void main() {
@@ -10,9 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ProfileScreen(),
+      home: Product(),
+      routes: {
+        '/profile': (context) => const ProfileScreen(), // Add the route for ProfileScreen
+        '/product': (context) => const Product(),
+      },
     );
   }
 }

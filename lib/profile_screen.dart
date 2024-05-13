@@ -10,7 +10,7 @@ class ProfileScreen extends StatelessWidget {
       appBar: AppBar(
         leading: GestureDetector(
             onTap: () {
-              Navigator.of(context).pushReplacementNamed('product_screen.dart');
+              Navigator.pushNamed(context, '/product');
             },
             child: const BackButton()),
         title: const Text(
